@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-default/static/css/main.924f0853.chunk.css",
-    "main.js": "/react-default/static/js/main.fed3b415.chunk.js",
-    "main.js.map": "/react-default/static/js/main.fed3b415.chunk.js.map",
-    "runtime-main.js": "/react-default/static/js/runtime-main.81ecc639.js",
-    "runtime-main.js.map": "/react-default/static/js/runtime-main.81ecc639.js.map",
-    "static/css/2.bc922b9c.chunk.css": "/react-default/static/css/2.bc922b9c.chunk.css",
-    "static/js/2.b3f1c8ef.chunk.js": "/react-default/static/js/2.b3f1c8ef.chunk.js",
-    "static/js/2.b3f1c8ef.chunk.js.map": "/react-default/static/js/2.b3f1c8ef.chunk.js.map",
-    "index.html": "/react-default/index.html",
-    "static/css/2.bc922b9c.chunk.css.map": "/react-default/static/css/2.bc922b9c.chunk.css.map",
-    "static/css/main.924f0853.chunk.css.map": "/react-default/static/css/main.924f0853.chunk.css.map",
-    "static/js/2.b3f1c8ef.chunk.js.LICENSE.txt": "/react-default/static/js/2.b3f1c8ef.chunk.js.LICENSE.txt"
+    "main.css": "/goit-react-hw-03-image-finder/static/css/main.0d196c74.chunk.css",
+    "main.js": "/goit-react-hw-03-image-finder/static/js/main.eb2a67de.chunk.js",
+    "main.js.map": "/goit-react-hw-03-image-finder/static/js/main.eb2a67de.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-03-image-finder/static/js/runtime-main.ef83e745.js",
+    "runtime-main.js.map": "/goit-react-hw-03-image-finder/static/js/runtime-main.ef83e745.js.map",
+    "static/css/2.2ab3243f.chunk.css": "/goit-react-hw-03-image-finder/static/css/2.2ab3243f.chunk.css",
+    "static/js/2.ce9802ab.chunk.js": "/goit-react-hw-03-image-finder/static/js/2.ce9802ab.chunk.js",
+    "static/js/2.ce9802ab.chunk.js.map": "/goit-react-hw-03-image-finder/static/js/2.ce9802ab.chunk.js.map",
+    "index.html": "/goit-react-hw-03-image-finder/index.html",
+    "static/css/2.2ab3243f.chunk.css.map": "/goit-react-hw-03-image-finder/static/css/2.2ab3243f.chunk.css.map",
+    "static/css/main.0d196c74.chunk.css.map": "/goit-react-hw-03-image-finder/static/css/main.0d196c74.chunk.css.map",
+    "static/js/2.ce9802ab.chunk.js.LICENSE.txt": "/goit-react-hw-03-image-finder/static/js/2.ce9802ab.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.81ecc639.js",
-    "static/css/2.bc922b9c.chunk.css",
-    "static/js/2.b3f1c8ef.chunk.js",
-    "static/css/main.924f0853.chunk.css",
-    "static/js/main.fed3b415.chunk.js"
+    "static/js/runtime-main.ef83e745.js",
+    "static/css/2.2ab3243f.chunk.css",
+    "static/js/2.ce9802ab.chunk.js",
+    "static/css/main.0d196c74.chunk.css",
+    "static/js/main.eb2a67de.chunk.js"
   ]
 }

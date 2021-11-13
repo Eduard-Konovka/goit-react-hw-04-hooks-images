@@ -1,0 +1,2 @@
+(this["webpackJsonpgoit-react-hw-03-image-finder"]=this["webpackJsonpgoit-react-hw-03-image-finder"]||[]).push([[0],{10:function(e,t,n){},12:function(e,t,n){},14:function(e,t,n){"use strict";n.r(t);var c=n(0),i=n.n(c),r=n(2),o=n.n(r),s=(n(9),n(10),n(11),n(4)),a=(n(12),n(1));function d(){return Object(a.jsxs)("div",{children:["'Hello world!'",Object(a.jsx)(s.a,{})]})}o.a.render(Object(a.jsx)(i.a.StrictMode,{children:Object(a.jsx)(d,{})}),document.getElementById("root"))}},[[14,1,2]]]);
+//# sourceMappingURL=main.eb2a67de.chunk.js.map
