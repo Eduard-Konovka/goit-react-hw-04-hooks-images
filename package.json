@@ -1,5 +1,5 @@
 {
-  "name": "react-default",
+  "name": "goit-react-hw-03-image-finder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,13 +31,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/react-default.git"
+    "url": "git+https://github.com/Eduard-Konovka/goit-react-hw-03-image-finder.git"
   },
   "author": "Eduard Konovka <ed098ua@gmail.com>",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/react-default/issues"
+    "url": "https://github.com/Eduard-Konovka/goit-react-hw-03-image-finder/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/react-default",
+  "homepage": "https://Eduard-Konovka.github.io/goit-react-hw-03-image-finder",
   "eslintConfig": {
     "extends": [
       "react-app",

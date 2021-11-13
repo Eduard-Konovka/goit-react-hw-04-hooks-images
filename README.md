@@ -1,121 +1,134 @@
-# Лайт-сборка Create React App
+# Критерии приема
 
-Базовая сборка Create React App + Modern Normalize + Prettier + Husky + ESLint +
-Classnames + ShortId + React Icons + React-Toastify + Axios + deploy GitHub
-Pages
+- Создан репозиторий `goit-react-hw-03-image-finder`.
+- При сдаче домашней работы есть ссылки: на исходные файлы и рабочую страницу
+  проекта на `GitHub pages`.
+- В состоянии компонентов хранится минимально необходимый набор данных,
+  остальное вычисляется.
+- При запуске кода задания, в консоли нету ошибок и предупреждений.
+- Для каждого компонента есть отдельная папка с файлом React-компонента и файлом
+  стилей.
+- Для компонентов описаны `propTypes`, и где необходимо, `defaultProps`.
+- Все что компонент ожидает в виде пропов, передается ему при вызове.
+- Имена компонентов понятные, описательные.
+- JS-код чистый и понятный, используется `Prettier`.
+- Стилизация делается только `SASS`, `CSS-модулями` или `Styled Components`,
+  поэтому классы в результирующем DOM могут отличаться от примеров.
+- Для стилизации достаточно позиционирование и размеры приближенные к макету.
+  Компоненты, в первую очередь, должны работать, а уже потом быть красивые,
+  выделяй 20% времени на стилизацию и 80% на JS.
 
-## Для установки сборки:
+# Поиск изображений
 
-1. Копируем этот репозиторий себе.
+Напиши приложение поиска изображений по ключевому слову. Превью рабочего
+приложения
+[смотри по ссылке](https://drive.google.com/file/d/1oXCGyiq4uKwW0zzraZLKk4lh3voBlBzZ/view?usp=sharing).
 
-2. Открываем в VSCode и запускаем в консоли команду `npm ci` чтобы установить
-   загрузчики и плагины из перечня "package-lock.json".
+Создай компоненты `<Searchbar>`, `<ImageGallery>`, `<ImageGalleryItem>`,
+`<Loader>`, `<Button>` и `<Modal>`. Готовые стили компонентов можно взять в
+файле
+[styles.css](https://github.com/goitacademy/react-homework/blob/master/homework-03/image-finder/styles.css)
+и подправить под себя, если необходимо.
 
-3. Меняем под себя значения ключа в файле "package-lock.json":
-   `"name": "react-default"` на `"name": "имя_вашего_проекта"` или просто
-   `"name": ""`
+![preview](https://github.com/goitacademy/react-homework/blob/master/homework-03/image-finder/mockup/preview.jpg)
 
-4. Меняем под себя значения ключей в файле "package.json":
-   1. `"name": "react-default"` на `"name": "имя_вашего_проекта"` или просто
-      `"name": ""`;
-   2. В параметрах "repository" -
-      `"url": "git+https://github.com/Eduard-Konovka/react-default.git"` на
-      `"url": "git+https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git"`;
-   3. В параметрах "bugs" -
-      `"url": "https://github.com/Eduard-Konovka/react-default.git/issues"` на
-      `"url": "https://github.com/ваше_имя_на_ГитХабе/имя_вашего_проекта.git/issues"`;
-   4. `"author": "Eduard Konovka <ed098ua@gmail.com>"` на
-      `"author": "Ваше_имя <ваш_e-mail>"` или просто `"author": ""`;
-   5. `"homepage": "https://Eduard-Konovka.github.io/react-default"` на
-      `"homepage": "https://ваше_имя_на_ГитХабе.github.io/имя_вашего_проекта"`.
+## Инструкция Pixabay API
 
-## Команды скриптов в консоли bash:
+Для HTTP-запросов используй публичный сервис поиска изображений
+[Pixabay](https://pixabay.com/api/docs/). Зарегистрируйся и получи приватный
+ключ доступа.
 
-Вас интересуют первых два скрипта: `npm start` и `npm run deploy` :)
+URL-строка HTTP-запроса.
 
-### `npm start`
+```bash
+https://pixabay.com/api/?q=cat&page=1&key=your_key&image_type=photo&orientation=horizontal&per_page=12
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Pixabay API поддерживает пагинацию, по умолчанию параметр `page` равен `1`.
+Пусть в ответе приходит по 12 объектов, установлено в параметре `per_page`. Не
+забудь что при поиске по новому ключевому слову, необходимо сбрасывать значение
+`page` в `1`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+В ответе от апи приходит массив объектов, в которых тебе интересны только
+следущие свойства.
 
-### `npm run deploy`
+- `id` - уникальный идентификатор
+- `webformatURL` - ссылка на маленькое изображение для списка карточек
+- `largeImageURL` - ссылка на большое изображение для модального окна
 
-Deploy development files to GitHub.
+## Описание компонента `<Searchbar>`
 
-### `npm test`
+Компонент принимает один проп `onSubmit` - функцию для передачи значения инпута
+при сабмите формы. Создает DOM-элемент следующей структуры.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+```html
+<header class="searchbar">
+  <form class="form">
+    <button type="submit" class="button">
+      <span class="button-label">Search</span>
+    </button>
 
-### `npm run build`
+    <input
+      class="input"
+      type="text"
+      autocomplete="off"
+      autofocus
+      placeholder="Search images and photos"
+    />
+  </form>
+</header>
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best
-performance.
+## Описание компонента `<ImageGallery>`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Список карточек изображений. Создает DOM-элемент следующей структуры.
 
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
+```html
+<ul class="gallery">
+  <!-- Набор <li> с изображениями -->
+</ul>
+```
 
-### `npm run eject`
+## Описание компонента `<ImageGalleryItem>`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Компонент элемента списка с изображением. Создает DOM-элемент следующей
+структуры.
 
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
+```html
+<li class="gallery-item">
+  <img src="" alt="" />
+</li>
+```
 
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
+## Описание компонента `<Button>`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
+При нажатии на кнопку `Load more` должна догружаться следующая порция
+изображений и рендериться вместе с предыдущими. Кнопка должна рендерится только
+тогда, когда есть какие-то загруженные изобаржения. Если массив изображений
+пуст, кнопка не рендерится.
 
-## Learn More
+## Описание компонента `<Loader>`
 
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Компонент спинера, отображется пока идет загрузка изобаржений. Используй любой
+готовый компонент, например
+[react-loader-spinner](https://github.com/mhnpd/react-loader-spinner) или любой
+другой.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Описание компонента `<Modal>`
 
-### Code Splitting
+При клике по элементу галереи должно открываться модальное окно с темным
+оверлеем и отображаться большая версия изображения. Модальное окно должно
+закрываться по нажатию клавиши `ESC` или по клику на оверлее.
 
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Внешний вид похож на функционал этого
+[VanillaJS-плагина](https://basiclightbox.electerious.com/), только вместо
+белого модального окна рендерится изображение (в примере нажми `Run`). Анимацию
+делать не нужно!
 
-### Analyzing the Bundle Size
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here:
-[https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```html
+<div class="overlay">
+  <div class="modal">
+    <img src="" alt="" />
+  </div>
+</div>
+```
