@@ -3,7 +3,7 @@ import s from './Button.module.css';
 
 export default function Button({ type, onClick, children }) {
   return (
-    <button type={type} className={s.btn} onClick={onClick}>
+    <button type={type} className={s.btn} onClick={onClick} id="btn">
       {children}
     </button>
   );

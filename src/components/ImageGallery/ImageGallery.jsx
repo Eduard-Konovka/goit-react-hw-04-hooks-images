@@ -28,23 +28,28 @@ class ImageGallery extends Component {
     const nextPage = this.state.page;
 
     if (prevName !== nextName) {
-      this.setState({ page: 1, status: Status.PENDING });
+      this.setState({ images: [], page: 1, status: Status.PENDING });
 
-      fetchArticles(nextName, this.state.page)
-        .then(images => this.setState({ images, status: Status.RESOLVED }))
-        .catch(error => this.setState({ error, status: Status.REJECTED }));
+      setTimeout(() => {
+        fetchArticles(nextName, this.state.page)
+          .then(images => this.setState({ images, status: Status.RESOLVED }))
+          .catch(error => this.setState({ error, status: Status.REJECTED }));
+      }, 0);
     }
 
     if (prevPage !== nextPage) {
       this.setState({ status: Status.PENDING });
 
       fetchArticles(prevName, this.state.page)
-        .then(images =>
+        .then(images => {
           this.setState({
             images: [...prevState.images, ...images],
             status: Status.RESOLVED,
-          }),
-        )
+          });
+          document
+            .getElementById('btn')
+            .scrollIntoView({ block: 'center', behavior: 'smooth' });
+        })
         .catch(error => this.setState({ error, status: Status.REJECTED }));
     }
   }

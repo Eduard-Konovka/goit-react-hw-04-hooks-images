@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import s from './ImageGallery.module.css';
 import errorImage from './error.jpg';
+import s from './ImageGallery.module.css';
 
 export default function ImagesErrorView({ message }) {
   return (
