@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-03-image-finder/static/css/main.0132d1aa.chunk.css",
-    "main.js": "/goit-react-hw-03-image-finder/static/js/main.6a288333.chunk.js",
-    "main.js.map": "/goit-react-hw-03-image-finder/static/js/main.6a288333.chunk.js.map",
-    "runtime-main.js": "/goit-react-hw-03-image-finder/static/js/runtime-main.ef83e745.js",
-    "runtime-main.js.map": "/goit-react-hw-03-image-finder/static/js/runtime-main.ef83e745.js.map",
-    "static/css/2.e57484aa.chunk.css": "/goit-react-hw-03-image-finder/static/css/2.e57484aa.chunk.css",
-    "static/js/2.447ad179.chunk.js": "/goit-react-hw-03-image-finder/static/js/2.447ad179.chunk.js",
-    "static/js/2.447ad179.chunk.js.map": "/goit-react-hw-03-image-finder/static/js/2.447ad179.chunk.js.map",
-    "index.html": "/goit-react-hw-03-image-finder/index.html",
-    "static/css/2.e57484aa.chunk.css.map": "/goit-react-hw-03-image-finder/static/css/2.e57484aa.chunk.css.map",
-    "static/css/main.0132d1aa.chunk.css.map": "/goit-react-hw-03-image-finder/static/css/main.0132d1aa.chunk.css.map",
-    "static/js/2.447ad179.chunk.js.LICENSE.txt": "/goit-react-hw-03-image-finder/static/js/2.447ad179.chunk.js.LICENSE.txt",
-    "static/media/cross.5034ac69.svg": "/goit-react-hw-03-image-finder/static/media/cross.5034ac69.svg",
-    "static/media/error.8b3e8601.jpg": "/goit-react-hw-03-image-finder/static/media/error.8b3e8601.jpg",
-    "static/media/phones-tablet-2.0e5c52f5.png": "/goit-react-hw-03-image-finder/static/media/phones-tablet-2.0e5c52f5.png",
-    "static/media/SearchForm.module.css": "/goit-react-hw-03-image-finder/static/media/search.6ac6b6bc.svg"
+    "main.css": "/goit-react-hw-04-hooks-images/static/css/main.7d2fada4.chunk.css",
+    "main.js": "/goit-react-hw-04-hooks-images/static/js/main.7c5285cd.chunk.js",
+    "main.js.map": "/goit-react-hw-04-hooks-images/static/js/main.7c5285cd.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-04-hooks-images/static/js/runtime-main.6443b71d.js",
+    "runtime-main.js.map": "/goit-react-hw-04-hooks-images/static/js/runtime-main.6443b71d.js.map",
+    "static/css/2.e57484aa.chunk.css": "/goit-react-hw-04-hooks-images/static/css/2.e57484aa.chunk.css",
+    "static/js/2.e72815de.chunk.js": "/goit-react-hw-04-hooks-images/static/js/2.e72815de.chunk.js",
+    "static/js/2.e72815de.chunk.js.map": "/goit-react-hw-04-hooks-images/static/js/2.e72815de.chunk.js.map",
+    "index.html": "/goit-react-hw-04-hooks-images/index.html",
+    "static/css/2.e57484aa.chunk.css.map": "/goit-react-hw-04-hooks-images/static/css/2.e57484aa.chunk.css.map",
+    "static/css/main.7d2fada4.chunk.css.map": "/goit-react-hw-04-hooks-images/static/css/main.7d2fada4.chunk.css.map",
+    "static/js/2.e72815de.chunk.js.LICENSE.txt": "/goit-react-hw-04-hooks-images/static/js/2.e72815de.chunk.js.LICENSE.txt",
+    "static/media/cross.dce0dd9b.svg": "/goit-react-hw-04-hooks-images/static/media/cross.dce0dd9b.svg",
+    "static/media/error.8b3e8601.jpg": "/goit-react-hw-04-hooks-images/static/media/error.8b3e8601.jpg",
+    "static/media/phones-tablet-2.0e5c52f5.png": "/goit-react-hw-04-hooks-images/static/media/phones-tablet-2.0e5c52f5.png",
+    "static/media/SearchForm.module.css": "/goit-react-hw-04-hooks-images/static/media/search.722f5ec8.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ef83e745.js",
+    "static/js/runtime-main.6443b71d.js",
     "static/css/2.e57484aa.chunk.css",
-    "static/js/2.447ad179.chunk.js",
-    "static/css/main.0132d1aa.chunk.css",
-    "static/js/main.6a288333.chunk.js"
+    "static/js/2.e72815de.chunk.js",
+    "static/css/main.7d2fada4.chunk.css",
+    "static/js/main.7c5285cd.chunk.js"
   ]
 }
