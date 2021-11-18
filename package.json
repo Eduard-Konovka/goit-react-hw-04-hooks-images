@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-03-image-finder",
+  "name": "goit-react-hw-04-hooks-images",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,13 +33,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/goit-react-hw-03-image-finder.git"
+    "url": "git+https://github.com/Eduard-Konovka/goit-react-hw-04-hooks-images.git"
   },
   "author": "Eduard Konovka <ed098ua@gmail.com>",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/goit-react-hw-03-image-finder/issues"
+    "url": "https://github.com/Eduard-Konovka/goit-react-hw-04-hooks-images/issues"
   },
-  "homepage": "https://Eduard-Konovka.github.io/goit-react-hw-03-image-finder",
+  "homepage": "https://Eduard-Konovka.github.io/goit-react-hw-04-hooks-images",
   "eslintConfig": {
     "extends": [
       "react-app",
