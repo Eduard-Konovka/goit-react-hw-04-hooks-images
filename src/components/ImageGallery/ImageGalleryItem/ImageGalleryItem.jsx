@@ -2,7 +2,7 @@ import s from './ImageGalleryItem.module.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ImageGalleryItem = ({ image, tags, largeImage, toClick }) => {
+export default function ImageGalleryItem({ image, tags, largeImage, toClick }) {
   return (
     <img
       src={image}
@@ -11,12 +11,10 @@ const ImageGalleryItem = ({ image, tags, largeImage, toClick }) => {
       className={s.image}
     />
   );
-};
+}
 
 ImageGalleryItem.propTypes = {
   image: PropTypes.string.isRequired,
   tags: PropTypes.string.isRequired,
   toClick: PropTypes.func.isRequired,
 };
-
-export default ImageGalleryItem;

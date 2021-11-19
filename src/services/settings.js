@@ -1,4 +1,4 @@
-const URL = {
+const api_settings = {
   BASE_URL: `https://pixabay.com/api`,
   IMAGE_TYPE: `photo`,
   ORIENTATION: `horizontal`,
@@ -6,4 +6,4 @@ const URL = {
   KEY: `23466318-01f5a1cbd4b878b74c1a7b3b5`,
 };
 
-export default URL;
+export default api_settings;
