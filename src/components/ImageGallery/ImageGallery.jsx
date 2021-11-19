@@ -65,19 +65,19 @@ export default function ImageGallery({ imageRequest, toClick }) {
     setPage(prevState => prevState + 1);
   };
 
-  if (status === 'idle') {
+  if (status === Status.IDLE) {
     return <ImagesIdleView />;
   }
 
-  if (status === 'pending') {
+  if (status === Status.PENDING) {
     return <ImagesPendingView />;
   }
 
-  if (status === 'rejected') {
+  if (status === Status.REJECTED) {
     return <ImagesErrorView message={error.message} />;
   }
 
-  if (status === 'resolved') {
+  if (status === Status.RESOLVED) {
     return (
       <ImagesDataView images={images} toClick={toClick} forClick={addImages} />
     );
